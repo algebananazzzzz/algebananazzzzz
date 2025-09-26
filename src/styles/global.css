@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Inline safelist */
+/* Background colors with hover and dark variants */
+@source inline('bg-{gray,red,orange,yellow,green,cyan,blue,indigo,purple,violet,fuchsia,pink}-{500,600,700,800}');
+@source inline('{hover:,dark:}bg-{gray,red,orange,yellow,green,cyan,blue,indigo,purple,violet,fuchsia,pink}-{500,600,700,800}');
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #64748b;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
+}

@@ -1,0 +1,11 @@
+title: "Hello, I'm [Your Name]"
+description:
+  - Welcome to my portfolio page! 🌱
+  - "As a [Your Profession], I [Your Professional Statement]."
+endeavours:
+  - text: I'm aspiring to pass the XXX Certification
+    svgName: theme/spaceship
+  - text: I'm developing the XXX Project
+    svgName: theme/planet
+  - text: I'm currently interning in XXX
+    svgName: theme/astronaut
