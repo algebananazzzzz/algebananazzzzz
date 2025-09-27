@@ -1,11 +1,13 @@
-title: "Hello, I'm [Your Name]"
+title: "Hello, I'm Daniel"
 description:
   - Welcome to my portfolio page! 🌱
-  - "As a [Your Profession], I [Your Professional Statement]."
-endeavours:
-  - text: I'm aspiring to pass the XXX Certification
+  - As an aspiring Solutions Architect, I have a strong passion for cloud solutions and emerging technologies! I am a genuine and curious person, and I live my life by the motto "Learning is always free".
+
+about:
+  Latest Endeavours:
+  - text:  I'm aspiring to pass the Certified Kubernetes Administration Certification and immerse myself into blockchain technologies
     svgName: theme/spaceship
-  - text: I'm developing the XXX Project
+  - text: I'm maintaining and further expanding the Odyssey Framework, a framework to empower use of IaC and CI/CD for developers
     svgName: theme/planet
-  - text: I'm currently interning in XXX
+  - text:  I'm currently studying in NUS Computer Sciences, leading Sheares Web, a hall wide initiative  benefiting 500+ residents
     svgName: theme/astronaut

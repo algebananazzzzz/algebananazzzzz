@@ -1,26 +1,40 @@
 description:
-  - "Explore my skills and certifications that showcase my expertise and commitment to growth."
+  - "As someone naturally curious and committed to growth, I’m always eager to explore new paradigms in the industry and chase the rabbit hole."
+  - "I embrace an open, explorative approach to learning—often diving deep into technologies even when there’s no immediate purpose."
 certificates:
-  - text: AWS Certified XXX
-    link: https://www.credly.com/organizations/amazon-web-services/badges
+  - text: AWS Certified Solutions Architect Professional
+    link: https://www.credly.com/badges/ecf41b06-5426-4c3e-90f9-ba9196b78675/public_url
     svgName: aws
-  - text: "HashiCorp Certified XXX"
-    link: https://www.credly.com/organizations/amazon-web-services/badges
+  - text: AWS Certified Developer Associate
+    link: https://www.credly.com/badges/3fcda81e-fe66-49d2-be22-cb2d46150987/public_url
+    svgName: aws
+  - text: HashiCorp Certified Terraform Associate
+    link: https://www.credly.com/badges/2b4e8e39-4354-4edb-98dc-d43d07cdc589/public_url
     svgName: terraform
 skillicons:
+  - aws
+  - terraform
+  - gitlab
+  - docker
+  - kubernetes
+  - golang
+  - java
+  - postgresql
+  - redis
   - gatsby
   - reactjs
   - tailwind
-  - aws
-  - terraform
-  - docker
-  - kubernetes
-  - gitlab
+  - solidity
 skills:
   Proficient:
-    - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum mauris ac tortor hendrerit.
-    - Integer at velit molestie, fermentum quam non, suscipit nibh.
-    - Ut tincidunt purus ut lorem viverra, ac aliquet lacus tempus.
-  Competent:
-    - Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-    - Vivamus tincidunt mauris non consequat aliquet.
+    - AWS Cloud Experience (2 yrs)
+    - Terraform, GitLab, GitHub Actions
+    - Golang, Java, Typescript, Python
+    - PostgreSQL, NoSQL, Redis
+    - React Native, Expo, Firebase, TailwindCSS
+    - Docker and Kubernetes
+    - Atlassian Suite (Jira and Confluence)
+
+  Exploring:
+    - ELK Stack, Prometheus and Grafana
+    - Blockchain Development with Solidity

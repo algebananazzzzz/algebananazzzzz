@@ -42,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, setPopup }) => {
                         {project.svgIcons.map((svgName, index) => (
                             <div
                                 key={index}
-                                className="inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-600 dark:text-gray-400"
+                                className="inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-900 dark:text-gray-200"
                             >
                                 <Svg name={svgName} className="w-4 md:w-5" />
                             </div>
