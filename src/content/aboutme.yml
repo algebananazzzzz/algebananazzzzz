@@ -3,7 +3,8 @@ description:
   - Welcome to my portfolio page! 🌱
   - As an aspiring Solutions Architect, I have a strong passion for cloud solutions and emerging technologies! I am a genuine and curious person, and I live my life by the motto "Learning is always free".
 
-endeavours:
+about:
+  Latest Endeavours:
   - text:  I'm aspiring to pass the Certified Kubernetes Administration Certification and immerse myself into blockchain technologies
     svgName: theme/spaceship
   - text: I'm maintaining and further expanding the Odyssey Framework, a framework to empower use of IaC and CI/CD for developers

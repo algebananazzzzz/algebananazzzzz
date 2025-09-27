@@ -1,92 +1,87 @@
 description:
-  - "Discover my projects where I demonstrate creativity and problem-solving skills."
-
+  - I believe in process reengineering over mere brute functional solutions, as it holds greater potential to address overlapping needs and create impact.
+  - Thus, I always aim to create transformative projects that improve underlying workflows and processes rather than only addressing immediate issues."
 projects:
-  - name: "Daniel's Website"
-    description: "A succinct description of the project's purpose and functionality"
-    additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
-    date: "Apr 2024"
+  - name: "Odyssey Framework"
+    description: "Framework empowering devs to build robust AWS solutions with IaC and CI/CD"
+    additional_description: "Create production-grade projects from a CLI/TUI that generates boilerplate Infrastructure as Code and CI/CD pipelines for specific use cases such as websites, scheduled tasks, or containerized applications."
+    date: "Jul 2024 - Present"
     svgIcons:
-      - gatsby
       - aws
       - terraform
+      - gitlab
+      - golang
+    actions:
+      - text: Repo
+        link: https://github.com/algebananazzzzz/odyssey
+      # - text: Demo
+      #   color: purple
+      #   video: demo.mp4
+
+  - name: "Nocturnal Project"
+    description: "Low-code, fully customizable portfolio template with automated GitHub Pages deployment"
+    additional_description: "Fully customizable portfolio site template built with GatsbyJS and TailwindCSS, deployed to Github Pages. All content is sourced from YAML files, where users can personalize their portfolio in minutes without touching code."
+    date: "Aug 2024"
+    svgIcons:
+      - gatsby
       - tailwind
     actions:
       - text: Repo
         link: https://github.com/algebananazzzzz/NocturnalProject
-      - text: Demo
+      - text: Demo Site
         color: purple
-        video: demo.mp4
+        link: https://algebananazzzzz.github.io/NocturnalProject
 
-  - name: "Project 2"
-    description: "A succinct description of the project's purpose and functionality"
-    additional_description: "A detailed description on the project's architecture, key components, and any unique selling points."
-    date: "Apr 2024"
+  - name: "Planear Project"
+    description: "Go library enabling developers to declaratively reconcile local and remote states"
+    additional_description: "Define custom reconciliation methods for your own purposes, such as database records (DML), while the library handles generating and applying diffs for millions of rows of CSV or JSON through concurrent pipelines."
+    date: "Aug 2025"
     svgIcons:
-      - gatsby
-      - aws
-      - terraform
-      - tailwind
-    actions:
-      - text: Repo
-        link: https://github.com/algebananazzzzz/NocturnalProject
-      - text: Demo
-        color: purple
-        video: demo.mp4
+      - golang
+    # actions:
+    #   - text: Repo
+    #     link: https://github.com/algebananazzzzz/odyssey
+      # - text: Demo
+      #   color: purple
+      #   video: demo.mp4
 
-  - name: "Project 3"
-    description: "A succinct description of the project's purpose and functionality"
-    additional_description: "A detailed description on the project's architecture, key components, and any unique selling points."
-    date: "Apr 2024"
-    svgIcons:
-      - gatsby
-      - aws
-      - terraform
-      - tailwind
-    actions:
-      - text: Repo
-        link: https://github.com/algebananazzzzz/NocturnalProject
-      - text: Demo
-        color: purple
-        video: demo.mp4
+# other_sections:
+#   Upcoming Projects:
+#     - name: "Upcoming Project A"
+#       date: "Apr 2024"
+#       description: "A succinct description of the project's purpose and functionality"
+#     - name: "Upcoming Project B"
+#       date: "Apr 2024"
+#       description: "A succinct description of the project's purpose and functionality"
+#     - name: "Upcoming Project C"
+#       date: "Apr 2024"
+#       description: "A succinct description of the project's purpose and functionality"
 
-other_sections:
-  Upcoming Projects:
-    - name: "Upcoming Project A"
-      date: "Apr 2024"
-      description: "A succinct description of the project's purpose and functionality"
-    - name: "Upcoming Project B"
-      date: "Apr 2024"
-      description: "A succinct description of the project's purpose and functionality"
-    - name: "Upcoming Project C"
-      date: "Apr 2024"
-      description: "A succinct description of the project's purpose and functionality"
-
-  Archived Projects:
-    - name: "Archived Project X"
-      description: "A succinct description of the project's purpose and functionality"
-      date: "Apr 2024"
-      actions:
-        - text: Repo
-          link: https://github.com/algebananazzzzz/NocturnalProject
-        - text: Demo
-          color: purple
-          video: demo.mp4
-    - name: "Archived Project Y"
-      description: "A succinct description of the project's purpose and functionality"
-      date: "Apr 2024"
-      actions:
-        - text: Repo
-          link: https://github.com/algebananazzzzz/NocturnalProject
-        - text: Demo
-          color: purple
-          video: demo.mp4
-    - name: "Archived Project Z"
-      description: "A succinct description of the project's purpose and functionality"
-      date: "Apr 2024"
-      actions:
-        - text: Repo
-          link: https://github.com/algebananazzzzz/NocturnalProject
-        - text: Demo
-          color: purple
-          video: demo.mp4
+#   Archived Projects:
+#     - name: "Archived Project X"
+#       description: "A succinct description of the project's purpose and functionality"
+#       date: "Apr 2024"
+#       actions:
+#         - text: Repo
+#           link: https://github.com/algebananazzzzz/NocturnalProject
+#         - text: Demo
+#           color: purple
+#           video: demo.mp4
+#     - name: "Archived Project Y"
+#       description: "A succinct description of the project's purpose and functionality"
+#       date: "Apr 2024"
+#       actions:
+#         - text: Repo
+#           link: https://github.com/algebananazzzzz/NocturnalProject
+#         - text: Demo
+#           color: purple
+#           video: demo.mp4
+#     - name: "Archived Project Z"
+#       description: "A succinct description of the project's purpose and functionality"
+#       date: "Apr 2024"
+#       actions:
+#         - text: Repo
+#           link: https://github.com/algebananazzzzz/NocturnalProject
+#         - text: Demo
+#           color: purple
+#           video: demo.mp4
