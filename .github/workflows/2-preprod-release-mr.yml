@@ -1,0 +1,111 @@
+# .github/workflows/preprod-release.yml
+name: Pre-production Release
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "preprod-release"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  create-semantic-tag:
+    runs-on: ubuntu-latest
+    permissions: write-all
+
+    outputs:
+      NEW_TAG: ${{ steps.tag_version.outputs.new_tag }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Bump version and push tag
+        id: tag_version
+        uses: anothrNick/github-tag-action@v1
+        env:
+          DEFAULT_BUMP: patch
+          RELEASE_BRANCHES: main
+          WITH_V: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: echo "New tag ${{ steps.tag_version.outputs.new_tag }}"
+
+  deploy-to-gh-pages:
+    name: ⚙️ Build Gatsby Static Assets
+    runs-on: ubuntu-latest
+    environment:
+      name: preprod
+      url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      DEPLOY_ENV: preprod
+
+    steps:
+      - name: 📄 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Detect Package Manager
+        id: detect-pm
+        run: |
+          if [ -f "yarn.lock" ]; then
+            echo "manager=yarn" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+          elif [ -f "package.json" ]; then
+            echo "manager=npm" >> $GITHUB_OUTPUT
+            echo "command=ci" >> $GITHUB_OUTPUT
+          else
+            echo "Unable to detect package manager"
+            exit 1
+          fi
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: ${{ steps.detect-pm.outputs.manager }}
+
+      - name: ⚙️ Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+        with:
+          static_site_generator: gatsby
+
+      - name: ⬇️ Restore Gatsby Cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            public
+            .cache
+          key: ${{ runner.os }}-gatsby-${{ hashFiles('**/yarn.lock', '**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-
+
+      - name: 📦 Install Dependencies
+        run: ${{ steps.detect-pm.outputs.manager }} ${{ steps.detect-pm.outputs.command }}
+
+      - name: ⚙️ Build with Gatsby
+        env:
+          PREFIX_PATHS: "true"
+        run: ${{ steps.detect-pm.outputs.manager }} run build
+
+      - name: 📤 Upload Build Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+      - name: 🚀 Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
