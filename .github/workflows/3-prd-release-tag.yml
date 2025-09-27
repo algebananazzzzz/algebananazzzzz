@@ -7,6 +7,10 @@ on:
       - 'v[0-9]+.[0-9]+.[0-9]+' # Matches tags like v1.2.3
   workflow_dispatch: {}
 
+concurrency:
+  group: "prd-release"
+  cancel-in-progress: false
+
 jobs:
   build-static-assets:
     name: ⚙️ Build Gatsby Static Assets
