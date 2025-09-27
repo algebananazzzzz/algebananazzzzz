@@ -6,9 +6,12 @@ const date = new Date();
 const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "short", day: "numeric" };
 const formatted = date.toLocaleDateString("en-US", options);
 
+const isPreprod = process.env.DEPLOY_ENV === "preprod"
+const pathPrefix = isPreprod ? "/algebananazzzzz" : ""
+
 const config: GatsbyConfig = {
   // Change this according to your repository name
-  pathPrefix: `/NocturnalProject`,
+  pathPrefix,
   siteMetadata: {
     title: `Nocturnal Project`,
     siteUrl: `https://www.yourdomain.tld`,

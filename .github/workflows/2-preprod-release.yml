@@ -25,13 +25,15 @@ jobs:
     name: ⚙️ Build Gatsby Static Assets
     runs-on: ubuntu-latest
     environment:
-      name: prd
+      name: preprod
+    env:
+      DEPLOY_ENV: ${{ github.environment }}
 
     steps:
-      - name: 1. 📄 Checkout Repository
+      - name: 📄 Checkout Repository
         uses: actions/checkout@v4
 
-      - name: 2. ⚙️ Detect Package Manager
+      - name: ⚙️ Detect Package Manager
         id: detect-pm
         run: |
           if [ -f "yarn.lock" ]; then
@@ -45,7 +47,7 @@ jobs:
             exit 1
           fi
 
-      - name: 3. ⚙️ Setup Node.js
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
