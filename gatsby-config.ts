@@ -13,7 +13,7 @@ const config: GatsbyConfig = {
   // Change this according to your repository name
   pathPrefix,
   siteMetadata: {
-    title: `Nocturnal Project`,
+    title: `Daniel's Website`,
     siteUrl: `https://www.yourdomain.tld`,
     lastUpdated: formatted,
   },
@@ -34,7 +34,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Nocturnal Project`,
+        name: `Daniel's Website`,
         short_name: `Nocturnal`,
         start_url: `/`,
         icon: "src/assets/images/icon.png",

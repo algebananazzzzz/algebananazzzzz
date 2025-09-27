@@ -2,22 +2,29 @@ description:
   - "Learn about my professional experiences that have shaped my journey in [Your Field]."
 
 experiences:
-  - name: "Internship: [Company Name]"
+  - name: "Chairperson: Sheares Web"
     description:
-      - "Description of tasks and responsibilities during the internship."
-      - "Details about projects worked on and skills utilized."
-    date: "Start Date - End Date"
+      - Currently leading a student-led tech initiative in NUS Sheares Hall driving digital transformation for 500+ residents.
+      - Engineered a pipeline using Liquibase and a custom Golang script to declaratively onboard 1,500+ rows of data from CSV into PostgreSQL, saving >50 man-hours, reducing change failure rate from 75% → 5% and cutting MTTR from infinite → 1 minute.
+      - Introduced an automated Gale–Shapley CCA allocation system, reducing manual workload by ~30 man-hours per allocation cycle.
+      - Migrated legacy monolithic systems to serverless solutions in AWS, cutting costs by 86% from $893 → ~$120 per annum.
+      - Led the development of the Sheares App, actively used by 500+ residents monthly, boosting hall event participation by ~20%.
+      - Conduct workSHops to spark interest in technology among residents, covering topics such as Figma, React, and Blockchain.
+    date: "Jul 2024 - Present"
     color: blue
-    actions:
-      - text: "Recommendation Letter"
-        asset: "dummy.pdf"
+    # actions:
+    #   - text: "Recommendation Letter"
+    #     asset: "recommendation-letter-govtech.pdf"
 
-  - name: "Mentor: [Workshop Name]"
+  - name: "Devops Intern: GovTech, Singapore"
     description:
-      - "Overview of the workshop and topics covered."
-      - "Information about assisting participants and facilitating learning."
-    date: "Start Date - End Date"
+      - Architected cloud solutions orchestrating 20+ AWS services and refactored GitLab CI/CD pipelines across 15+ projects, reducing pipeline execution time by ~40%.
+      - Established a reusable centralized Terraform module repository, reducing code duplication by an est. 40% across 10+ projects and onboarding 50+ unmanaged microservice resources.
+      - Developed a Golang ChatOps platform automating 4 critical operational tasks and implemented 7 event-driven automation solutions, cutting man-hours by an est. 20 per week.
+      - Led team-wide adoption of AWS Security Hub and Prowler, boosting CIS security scores by over 20% across 3 environments.
+      - Refactored VPC architecture with AWS Network Firewall and introduced WAF to block traffic to ~100 suspicious IPs.
+    date: Nov 2023 - Jul 2024
     color: purple
     actions:
-      - text: "View Tutorial"
-        link: "https://example.com/workshop-tutorial"
+      - text: "Recommendation Letter"
+        asset: "recommendation-letter-govtech.pdf"

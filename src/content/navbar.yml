@@ -1,17 +1,15 @@
-title: My Portfolio # replace with your title for the Navbar
+title: Algebananazzzzz # replace with your title for the Navbar
 
 contact_buttons:
   # For Contact buttons. Optional, remove items to omit from navbar
-  - svgName: contact/gitlab # Gitlab Icon
-    link: https://gitlab.com/<your_account>
+  # - svgName: contact/gitlab # Gitlab Icon
+  #   link: https://gitlab.com/<your_account>
   - svgName: contact/github # Github Icon
-    link: https://github.com/<your_account>
+    link: https://github.com/algebananazzzzz
   - svgName: contact/linkedin # LinkedIn Icon
-    asset: dummy.pdf
+    link: https://www.linkedin.com/in/danielzqx/
 
 external_links:
   # For external links. Optional, remove items to omit from navbar
-  - title: Blog
-    link: https://docs.algebananazzzzz.com/v/nocturnal-project
   - title: Resume #
-    asset: dummy.pdf # relative path to src/static
+    asset: resume.pdf # relative path to src/static
