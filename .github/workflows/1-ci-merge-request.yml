@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 1. 📄 Checkout Repository (with submodules)
+      - name: 📄 Checkout Repository (with submodules)
         uses: actions/checkout@v4
 
-      - name: 2. ⚙️ Detect Package Manager
+      - name: ⚙️ Detect Package Manager
         id: detect-pm
         run: |
           if [ -f "yarn.lock" ]; then
@@ -31,13 +31,13 @@ jobs:
             exit 1
           fi
 
-      - name: 3. ⚙️ Setup Node.js
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: ${{ steps.detect-pm.outputs.manager }}
 
-      - name: 4. ⬇️ Restore Gatsby Cache
+      - name: ⬇️ Restore Gatsby Cache
         uses: actions/cache@v4
         with:
           path: |
@@ -47,8 +47,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gatsby-
 
-      - name: 5. 📦 Install Dependencies
+      - name: 📦 Install Dependencies
         run: ${{ steps.detect-pm.outputs.manager }} ${{ steps.detect-pm.outputs.command }}
 
-      - name: 6. ⚙️ Build with Gatsby
+      - name: ⚙️ Build with Gatsby
         run: ${{ steps.detect-pm.outputs.manager }} run build

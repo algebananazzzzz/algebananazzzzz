@@ -14,13 +14,13 @@ jobs:
     environment:
       name: prd
     env:
-      DEPLOY_ENV: ${{ github.environment }}
+      DEPLOY_ENV: prd
 
     steps:
-      - name: 1. 📄 Checkout Repository
+      - name: 📄 Checkout Repository
         uses: actions/checkout@v4
 
-      - name: 2. ⚙️ Detect Package Manager
+      - name: ⚙️ Detect Package Manager
         id: detect-pm
         run: |
           if [ -f "yarn.lock" ]; then
@@ -34,19 +34,13 @@ jobs:
             exit 1
           fi
 
-      - name: 3. ⚙️ Setup Node.js
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: ${{ steps.detect-pm.outputs.manager }}
 
-      - name: 4. ⚙️ Configure GitHub Pages
-        id: pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: gatsby
-
-      - name: 5. ⬇️ Restore Gatsby Cache
+      - name: ⬇️ Restore Gatsby Cache
         uses: actions/cache@v4
         with:
           path: |
@@ -56,16 +50,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gatsby-
 
-      - name: 6. 📦 Install Dependencies
+      - name: 📦 Install Dependencies
         run: ${{ steps.detect-pm.outputs.manager }} ${{ steps.detect-pm.outputs.command }}
 
-      - name: 7. ⚙️ Build with Gatsby
+      - name: ⚙️ Build with Gatsby
+        env:
+          PREFIX_PATHS: "true"
         run: ${{ steps.detect-pm.outputs.manager }} run build
 
-      - name: 8. 📤 Upload Build Artifacts
+      - name: 📤 Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifact
+          name: prd-build-artifact
           path: ./public
 
   terraform-deploy:
@@ -75,47 +71,49 @@ jobs:
       name: prd
 
     outputs:
-      dest_bucket_name: ${{ steps.export-bucket.outputs.dest_bucket_name }}
+      dest_bucket_name: ${{ steps.outputs.outputs.dest_bucket_name }}
+      cloudfront_distribution_id: ${{ steps.outputs.outputs.cloudfront_distribution_id }}
 
     steps:
-      - name: 1. 📄 Checkout Repository (with submodules)
+      - name: 📄 Checkout Repository (with submodules)
         uses: actions/checkout@v4
         with:
           submodules: recursive
 
-      - name: 2. ⚙️ Configure AWS Credentials
+      - name: ⚙️ Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ vars.AWS_REGION }}
 
-      - name: 3. ⚙️ Setup Terraform
+      - name: ⚙️ Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: "1.5.0"
 
-      - name: 4. ⚙️ Terraform Init
+      - name: ⚙️ Terraform Init
         working-directory: infra
         run: terraform init -input=false
 
-      - name: 5. ⚙️ Select/Create Terraform Workspace
+      - name: ⚙️ Select/Create Terraform Workspace
         working-directory: infra
         run: terraform workspace select -or-create prd-web
 
-      - name: 6. ⚙️ Terraform Plan
+      - name: ⚙️ Terraform Plan
         working-directory: infra
         run: terraform plan --var-file=config/prd.tfvars -out=output.tfplan -input=false
 
-      - name: 7. ⚙️ Terraform Apply
+      - name: ⚙️ Terraform Apply
         working-directory: infra
         run: terraform apply -input=false --auto-approve output.tfplan
 
-      - name: 8. ⚙️ Export Terraform Output (Bucket Name)
-        id: export-bucket
+      - name: ⚙️ Export Terraform Output (Bucket Name)
+        id: outputs
         working-directory: infra
         run: |
           echo "dest_bucket_name=$(terraform output -raw origin_bucket_name)" >> $GITHUB_OUTPUT
+          echo "cloudfront_distribution_id=$(terraform output -raw cloudfront_distribution_id)" >> $GITHUB_OUTPUT
 
   deploy-to-s3:
     name: 🚀 Deploy to S3 Bucket
@@ -125,18 +123,21 @@ jobs:
       name: prd
 
     steps:
-      - name: 1. ⬇️ Download Build Artifact
+      - name: ⬇️ Download Build Artifact
         uses: actions/download-artifact@v4
         with:
-          name: build-artifact
+          name: prd-build-artifact
           path: public
 
-      - name: 2. ⚙️ Configure AWS Credentials
+      - name: ⚙️ Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ vars.AWS_REGION }}
 
-      - name: 3. 🚀 Sync Static Assets to S3
+      - name: 🚀 Sync Static Assets to S3
         run: aws s3 sync --delete public s3://${{ needs.terraform-deploy.outputs.dest_bucket_name }}
+
+      - name: 🚀 Invalidate Cloudfront Cache
+        run: aws cloudfront create-invalidation --distribution-id ${{ needs.terraform-deploy.outputs.cloudfront_distribution_id }} --paths "/*"

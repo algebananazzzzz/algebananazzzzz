@@ -21,13 +21,14 @@ defaults:
     shell: bash
 
 jobs:
-  build-static-assets:
+  deploy-to-gh-pages:
     name: ⚙️ Build Gatsby Static Assets
     runs-on: ubuntu-latest
     environment:
       name: preprod
+      url: ${{ steps.deploy.outputs.page_url }}
     env:
-      DEPLOY_ENV: ${{ github.environment }}
+      DEPLOY_ENV: preprod
 
     steps:
       - name: 📄 Checkout Repository
@@ -53,13 +54,13 @@ jobs:
           node-version: "20"
           cache: ${{ steps.detect-pm.outputs.manager }}
 
-      - name: 4. ⚙️ Configure GitHub Pages
+      - name: ⚙️ Configure GitHub Pages
         id: pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: gatsby
 
-      - name: 5. ⬇️ Restore Gatsby Cache
+      - name: ⬇️ Restore Gatsby Cache
         uses: actions/cache@v4
         with:
           path: |
@@ -69,27 +70,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gatsby-
 
-      - name: 6. 📦 Install Dependencies
+      - name: 📦 Install Dependencies
         run: ${{ steps.detect-pm.outputs.manager }} ${{ steps.detect-pm.outputs.command }}
 
-      - name: 7. ⚙️ Build with Gatsby
+      - name: ⚙️ Build with Gatsby
+        env:
+          PREFIX_PATHS: "true"
         run: ${{ steps.detect-pm.outputs.manager }} run build
 
-      - name: 8. 📤 Upload Build Artifacts
+      - name: 📤 Upload Build Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
-  deploy-to-gh-pages:
-    name: 🚀 Deploy to GitHub Pages
-    runs-on: ubuntu-latest
-    needs: build-static-assets
-    environment:
-      name: preprod
-      url: ${{ steps.deploy.outputs.page_url }}
-
-    steps:
-      - name: 1. 🚀 Deploy to GitHub Pages
+      - name: 🚀 Deploy to GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v4
 
@@ -102,7 +96,7 @@ jobs:
       contents: write
 
     steps:
-      - name: 1. 🏷️ Create Production Tag
+      - name: 🏷️ Create Production Tag
         uses: actions/github-script@v7
         with:
           script: |
