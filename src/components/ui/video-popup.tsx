@@ -35,7 +35,7 @@ const VideoPopupComponent: React.FC<VideoPopupProps> = ({ popup, setPopup }) => 
           )}
           <button
             onClick={() => setPopup(null)}
-            className="absolute top-3 right-3 inline-flex items-center justify-center text-gray-600 hover:text-gray-900 transition"
+            className="absolute top-3 right-3 inline-flex items-center justify-center transition"
           >
             <Svg name="theme/close" className="w-9 h-9" />
           </button>

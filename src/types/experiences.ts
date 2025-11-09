@@ -1,11 +1,11 @@
-import { ActionButton } from "./common";
+import { ActionButtonField } from "./action-button";
 
 export interface ExperienceItem {
     name: string;
     description: string[];
     date?: string;
     color?: string;
-    actions?: ActionButton[];
+    actions?: ActionButtonField[];
 }
 
 export interface ExperiencesContent {

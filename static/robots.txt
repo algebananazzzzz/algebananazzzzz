@@ -1,0 +1,14 @@
+# Robots.txt file for search engine optimization
+# Allows all bots to crawl and index the site
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /static/
+
+# Crawl delay (in seconds) - be friendly to server resources
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.yourdomain.tld/sitemap.xml

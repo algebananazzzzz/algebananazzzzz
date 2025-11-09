@@ -1,12 +1,9 @@
 import React from "react";
 import DynamicLink from "./dynamic-link";
+import { ActionButtonField } from "@/types/action-button";
 
-interface ActionButtonProps {
-  text: string;
-  link?: string;   // external URL
-  asset?: string;  // static file in /static
+interface ActionButtonProps extends ActionButtonField {
   action?: () => void; // open video action
-  color?: string; // Tailwind color prefix, default "indigo"
 }
 
 const ActionButton: React.FC<ActionButtonProps> = ({ text, link, asset, action, color = "indigo" }) => {
