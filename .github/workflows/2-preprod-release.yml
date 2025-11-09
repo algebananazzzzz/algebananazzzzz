@@ -96,7 +96,7 @@ jobs:
         run: ${{ steps.detect-pm.outputs.manager }} ${{ steps.detect-pm.outputs.command }}
 
       - name: ⚙️ Build with Gatsby
-        run: ${{ steps.detect-pm.outputs.manager }} run build
+        run: ${{ steps.detect-pm.outputs.manager }} run build -- --prefix-paths
 
       - name: 📤 Upload Build Artifacts
         uses: actions/upload-pages-artifact@v3
