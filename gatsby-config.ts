@@ -2,10 +2,10 @@ import type { GatsbyConfig } from "gatsby"
 import path from "path";
 
 // Load environment variables
-const pathPrefix = process.env.PATH_PREFIX || "/NocturnalProject";
+const pathPrefix = process.env.PATH_PREFIX || "/algebananazzzzz";
 const siteUrl = process.env.SITE_URL || "https://www.yourdomain.tld";
-const siteTitle = process.env.SITE_TITLE || "Nocturnal Project";
-const shortName = process.env.SITE_SHORT_NAME || "Nocturnal";
+const siteTitle = process.env.SITE_TITLE || "Daniel Zhou";
+const shortName = process.env.SITE_SHORT_NAME || "Daniel Zhou";
 
 // Format build date
 const date = new Date();

@@ -80,11 +80,13 @@ export default ExperiencePage
 
 export const Head = () => (
   <>
-    <title>Experiences</title>
-    <meta name="description" content="My professional experience and work history." />
-    <meta property="og:title" content="Experiences" />
-    <meta property="og:description" content="My professional experience and work history." />
+    <title>Daniel Zhou - Experiences</title>
+    <meta name="description" content="Daniel Zhou's professional experience and work history in Solutions Architecture and DevOps." />
+    <meta name="author" content="Daniel Zhou" />
+    <meta property="og:title" content="Daniel Zhou - Experiences" />
+    <meta property="og:description" content="Daniel Zhou's professional experience and work history in Solutions Architecture and DevOps." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@algebananazzzzz" />
   </>
 )

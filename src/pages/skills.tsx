@@ -82,11 +82,13 @@ export default SkillsPage
 
 export const Head = () => (
   <>
-    <title>Skills</title>
-    <meta name="description" content="My skills and expertise." />
-    <meta property="og:title" content="Skills" />
-    <meta property="og:description" content="My skills and expertise." />
+    <title>Daniel Zhou - Skills</title>
+    <meta name="description" content="Daniel Zhou's skills and expertise in cloud solutions, Kubernetes, AWS, and DevOps technologies." />
+    <meta name="author" content="Daniel Zhou" />
+    <meta property="og:title" content="Daniel Zhou - Skills" />
+    <meta property="og:description" content="Daniel Zhou's skills and expertise in cloud solutions, Kubernetes, AWS, and DevOps technologies." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@algebananazzzzz" />
   </>
 )

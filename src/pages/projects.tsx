@@ -43,11 +43,13 @@ export default ProjectPage
 
 export const Head = () => (
   <>
-    <title>Projects</title>
-    <meta name="description" content="My projects and work." />
-    <meta property="og:title" content="Projects" />
-    <meta property="og:description" content="My projects and work." />
+    <title>Daniel Zhou - Projects</title>
+    <meta name="description" content="Daniel Zhou's projects and work in cloud solutions, containerization, and DevOps." />
+    <meta name="author" content="Daniel Zhou" />
+    <meta property="og:title" content="Daniel Zhou - Projects" />
+    <meta property="og:description" content="Daniel Zhou's projects and work in cloud solutions, containerization, and DevOps." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@algebananazzzzz" />
   </>
 )

@@ -59,11 +59,13 @@ export default IndexPage
 
 export const Head = () => (
   <>
-    <title>About</title>
-    <meta name="description" content="About me and my background." />
-    <meta property="og:title" content="About" />
-    <meta property="og:description" content="About me and my background." />
+    <title>Daniel Zhou - About</title>
+    <meta name="description" content="Daniel Zhou - About me and my background as a Solutions Architect and DevOps Engineer." />
+    <meta name="author" content="Daniel Zhou" />
+    <meta property="og:title" content="Daniel Zhou - About" />
+    <meta property="og:description" content="Daniel Zhou - About me and my background as a Solutions Architect and DevOps Engineer." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@algebananazzzzz" />
   </>
 )
