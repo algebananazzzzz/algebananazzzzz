@@ -17,8 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: prd
-    env:
-      DEPLOY_ENV: prd
 
     steps:
       - name: 📄 Checkout Repository
