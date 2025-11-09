@@ -1,10 +1,13 @@
 import * as React from "react"
 import { HeadFC, PageProps } from "gatsby"
 import { navigate } from "gatsby";
+import { ThemeContext } from "@/components/theme/theme-context";
 
 const NotFoundPage: React.FC<PageProps> = () => {
+  const { theme } = React.useContext(ThemeContext);
+
   return (
-    <body className="dark bg-slate-900">
+    <body className={`${theme === "dark" ? "dark" : ""} ${theme === "dark" ? "bg-slate-900" : "bg-white"}`}>
       <div className="max-w-[50rem] flex flex-col mx-auto w-full h-screen">
         <div className="text-center py-10 px-4 sm:px-6 lg:px-8">
           <h1 className="block text-7xl font-bold text-gray-800 sm:text-9xl dark:text-white">404</h1>
@@ -26,4 +29,4 @@ const NotFoundPage: React.FC<PageProps> = () => {
 
 export default NotFoundPage
 
-export const Head: HeadFC = () => <title>Not found</title>
+export const Head: HeadFC = () => <title>Daniel Zhou - Page Not Found</title>
