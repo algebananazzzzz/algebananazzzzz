@@ -2,8 +2,8 @@ import type { GatsbyConfig } from "gatsby"
 import path from "path";
 
 // Load environment variables
-const pathPrefix = process.env.PATH_PREFIX || "/algebananazzzzz";
-const siteUrl = process.env.SITE_URL || "https://www.yourdomain.tld";
+const pathPrefix = process.env.PATH_PREFIX || "";
+const siteUrl = process.env.SITE_URL || "https://algebananazzzzz.com";
 const siteTitle = process.env.SITE_TITLE || "Daniel Zhou";
 const shortName = process.env.SITE_SHORT_NAME || "Daniel Zhou";
 

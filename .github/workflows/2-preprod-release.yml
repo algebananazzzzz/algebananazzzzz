@@ -97,7 +97,7 @@ jobs:
 
       - name: ⚙️ Build with Gatsby
         env:
-          PREFIX_PATHS: "true"
+          PATH_PREFIX: "/algebananazzzzz"
         run: ${{ steps.detect-pm.outputs.manager }} run build
 
       - name: 📤 Upload Build Artifacts
