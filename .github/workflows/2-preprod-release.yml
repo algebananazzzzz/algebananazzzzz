@@ -50,7 +50,7 @@ jobs:
       name: preprod
       url: ${{ steps.deploy.outputs.page_url }}
     env:
-      DEPLOY_ENV: preprod
+      PATH_PREFIX: "/algebananazzzzz"
 
     steps:
       - name: 📄 Checkout Repository
@@ -96,8 +96,6 @@ jobs:
         run: ${{ steps.detect-pm.outputs.manager }} ${{ steps.detect-pm.outputs.command }}
 
       - name: ⚙️ Build with Gatsby
-        env:
-          PATH_PREFIX: "/algebananazzzzz"
         run: ${{ steps.detect-pm.outputs.manager }} run build
 
       - name: 📤 Upload Build Artifacts
