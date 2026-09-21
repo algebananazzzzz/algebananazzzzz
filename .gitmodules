@@ -1,3 +1,0 @@
-[submodule "infra/modules"]
-	path = infra/modules
-	url = git@github.com:algebananazzzzz/terraform-modules.git
