@@ -27,17 +27,23 @@ My full experience, certifications, and the best way to reach me are on LinkedIn
 
 [![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect_with_me-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/danielzqx)
 
-a nebula of code and craft. Singapore · 1.3°N
+## 🌌 My nebula
+
+a nebula of code and craft. The tools I work with, grouped into clusters, and what I do away from the keyboard.
 
 ```text
-          .        *                      .          +
-   CLOUD         .           .      PLATFORM      .
-   * aws  gcp                       * kubernetes  docker
-     terraform  ansible               helm  argocd  nginx
-        .          +                     .
-                *            .
-   .     LANGUAGES      *              WEB        .
-     go  python  bash                  typescript  react  astro
-     rust  hcl                         tailwind  node
-        +        .          *               +       .
+          .        *                                    .          +
+   CLOUD         .                    CONTAINERIZATION   .
+   * aws  gcp                         * runc  docker
+     terraform  ansible                 kubernetes  helm  argocd
+        .          +                        .            *
+                                                      .            .
+   VIRTUALIZATION      *              LANGUAGES      .
+   * kvm  qemu                        * go  python  bash
+       .                                rust  hcl
+        +        .                          *               +
+   WEB          .                         INTERESTS      .
+   * typescript  react  astro         * ultimate frisbee
+     tailwind  node  nginx              brewing beer
+        .          +                        .            +
 ```
