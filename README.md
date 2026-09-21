@@ -1,10 +1,19 @@
-# Daniel · algebananazzzzz
+<h1>Hi 👋, I'm Daniel</h1>
+<h3>An aspiring Solutions Architect from Singapore</h3>
+
+- 🔭 I’m currently working on [Odyssey Framework](https://github.com/algebananazzzzz/odyssey)
+
+- 🌱 I’m currently pursuing **the Certified Kubernetes Administration Certification**
+
+- 👨‍💻 All of my projects are available at [algebananazzzzz.com](https://algebananazzzzz.com)
+
+- 💬 Let's talk about **Cloud Solutions, Containerization and DevOps technologies!**
+
+- 📄 Know about my experiences [linkedin.com/in/danielzqx](https://www.linkedin.com/in/danielzqx)
+
+- ⚡ Fun fact **I craft home brew beer with my father**
 
 a nebula of code and craft. Singapore · 1.3°N
-
-Cloud / DevOps. I build infrastructure as code, run a homelab, and brew beer with my dad.
-
-now: CKA prep · Odyssey Framework
 
 ```text
           .        *                      .          +
@@ -18,5 +27,3 @@ now: CKA prep · Odyssey Framework
      rust  hcl                         tailwind  node
         +        .          *               +       .
 ```
-
-[algebananazzzzz.com](https://algebananazzzzz.com) · [linkedin](https://linkedin.com/in/danielzqx)
