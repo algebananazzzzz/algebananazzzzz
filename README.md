@@ -11,7 +11,7 @@
 
 - 🧰 Core repos: [Corum](https://github.com/algebananazzzzz/Corum) · [Odyssey](https://github.com/algebananazzzzz/odyssey) · [terraform-modules](https://github.com/algebananazzzzz/terraform-modules) · [NubeNube](https://github.com/algebananazzzzz/nubenube) · [Planear](https://github.com/algebananazzzzz/planear) · [nybble](https://github.com/algebananazzzzz/nybble)
 
-- 🏛️ I also build with [Sheares Web](https://github.com/ShearesWeb), the dev team for NUS Sheares Hall
+- 🏛️ I’m the chairperson of [Sheares Web](https://github.com/ShearesWeb), the dev team for NUS Sheares Hall
 
 - 💬 Let's talk about **Cloud Solutions, Containerization and DevOps technologies!**
 
