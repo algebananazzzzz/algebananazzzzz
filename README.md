@@ -5,8 +5,6 @@
 
 - 🎓 Certified: **Certified Kubernetes Administrator (CKA)** and **AWS Certified Solutions Architect Professional**
 
-- 👨‍💻 All of my projects are available at [algebananazzzzz.com](https://algebananazzzzz.com)
-
 - 🏠 My homelab: [HomeLab](https://github.com/algebananazzzzz/HomeLab) · [Ansible](https://github.com/algebananazzzzz/homelab-ansible) · [Kubernetes manifests](https://github.com/algebananazzzzz/homelab-manifests)
 
 - 🧰 Core repos: [Corum](https://github.com/algebananazzzzz/Corum) · [Odyssey](https://github.com/algebananazzzzz/odyssey) · [terraform-modules](https://github.com/algebananazzzzz/terraform-modules) · [NubeNube](https://github.com/algebananazzzzz/nubenube) · [Planear](https://github.com/algebananazzzzz/planear) · [nybble](https://github.com/algebananazzzzz/nybble)
@@ -15,9 +13,19 @@
 
 - 💬 Let's talk about **Cloud Solutions, Containerization and DevOps technologies!**
 
-- 📄 Know about my experiences [linkedin.com/in/danielzqx](https://www.linkedin.com/in/danielzqx)
-
 - ⚡ Fun fact **I craft home brew beer with my father**
+
+## 🌐 See my work
+
+My projects, experience, and notes live on my website.
+
+[![Visit algebananazzzzz.com](https://img.shields.io/badge/Visit-algebananazzzzz.com-00dfd5?style=for-the-badge)](https://algebananazzzzz.com)
+
+## 💼 Let's connect
+
+My full experience, certifications, and the best way to reach me are on LinkedIn.
+
+[![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect_with_me-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/danielzqx)
 
 a nebula of code and craft. Singapore · 1.3°N
 
