@@ -29,23 +29,30 @@ My full experience, certifications, and the best way to reach me are on LinkedIn
 
 ## 🌌 My nebula
 
-a nebula of code and craft. The tools I work with, grouped into clusters, and what I do away from the keyboard.
+a nebula of code and craft.
 
 ```text
-        .        *                                    .          +
-   CLOUD                              CONTAINERIZATION
-   * aws  gcp                         * runc  containerd  docker
-     terraform  ansible                 kubernetes  helm  argocd
-        .          +                        .            *
-   VIRTUALIZATION                     HOMELAB
-   * kvm  qemu  libvirt               * traefik  pihole  consul
-        +        .                          *               +
-   LANGUAGES                          WEB
-   * go  python  bash                 * typescript  react  astro
-     rust  hcl                          tailwind  node  nginx
-        .          +                        .            +
-   INTERESTS
-   * ultimate frisbee
-     brewing beer
-        +        .                          *               +
+      '                    o                   +
+                       +     CONTAINERIZATION   :         .                  .
+   CLOUD      .          *   * runc  containerd                      +
+   * aws  gcp .                docker  kubernetes      VIRTUALIZATION .  .
+     terraform  ansible        helm  argocd            * kvm  qemu   .  .
+             .         *              .         .  + o   libvirt
+ o                 +                          .     +       .          +.
+                           *   . '          .   .  .   .   +    +.
+         :                           + *     o    .    *.               .
+             HOMELAB     .     :   *               +    .  *
+             * traefik  pihole  . :   +.  LANGUAGES         .
+               consul    .            .   * go  python  bash
+   .                     + .                rust  hcl           *  .
+                       . o  *   .  :.   .       .      o           *        :
+     .                    . ' .     :                             *
+            +       .+        +    *                            '
+       WEB   *        .      .        *
+       * typescript  react                   *    INTERESTS              .
+         astro  tailwind     '  *.                * ultimate frisbee
+  ..     node  nginx      o        '        .       brewing beer
+ .                 *                             '
++    . .     .:    .                .   .          '
+  +       .            :' .    +                   .           .
 ```
