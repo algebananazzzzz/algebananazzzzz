@@ -32,18 +32,20 @@ My full experience, certifications, and the best way to reach me are on LinkedIn
 a nebula of code and craft. The tools I work with, grouped into clusters, and what I do away from the keyboard.
 
 ```text
-          .        *                                    .          +
-   CLOUD         .                    CONTAINERIZATION   .
-   * aws  gcp                         * runc  docker
+        .        *                                    .          +
+   CLOUD                              CONTAINERIZATION
+   * aws  gcp                         * runc  containerd  docker
      terraform  ansible                 kubernetes  helm  argocd
         .          +                        .            *
-                                                      .            .
-   VIRTUALIZATION      *              LANGUAGES      .
-   * kvm  qemu                        * go  python  bash
-       .                                rust  hcl
+   VIRTUALIZATION                     HOMELAB
+   * kvm  qemu  libvirt               * traefik  pihole  consul
         +        .                          *               +
-   WEB          .                         INTERESTS      .
-   * typescript  react  astro         * ultimate frisbee
-     tailwind  node  nginx              brewing beer
+   LANGUAGES                          WEB
+   * go  python  bash                 * typescript  react  astro
+     rust  hcl                          tailwind  node  nginx
         .          +                        .            +
+   INTERESTS
+   * ultimate frisbee
+     brewing beer
+        +        .                          *               +
 ```
