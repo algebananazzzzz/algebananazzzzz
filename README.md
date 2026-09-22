@@ -29,7 +29,7 @@ My full experience, certifications, and the best way to reach me are on LinkedIn
 
 ## 🌌 My nebula
 
-a nebula of code and craft.
+My code and craft.
 
 ```text
       '                    o                   +
